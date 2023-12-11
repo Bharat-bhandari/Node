@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <li><a href="/">Enter User</a></li>
+      <li><a href="/users">Users</a></li>
+    </nav>
+    <h1>Users</h1>
+
+    <% if (user.length >0) { %>
+    <div>
+      <% for (let userName of user) { %>
+      <ul>
+        <li><%= userName.name%></li>
+      </ul>
+
+      <%}%> <%} else { %>
+      <h1>Empty</h1>
+      <%}%>
+    </div>
+  </body>
+</html>

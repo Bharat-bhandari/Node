@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=pageTitle%></title>
+  </head>
+  <body>
+    <nav>
+      <li><a href="/">Enter User</a></li>
+      <li><a href="/users">Users</a></li>
+    </nav>
+    <form action="/add-user" method="POST">
+      <label for="name"></label>
+      <input type="text" name="name" id="" />
+      <button type="submit">add user</button>
+    </form>
+  </body>
+</html>

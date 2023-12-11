@@ -128,15 +128,24 @@
 //     console.log("finallly");
 //   });
 
-const getAllUsers = async () => {
+const promiseFour = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let error = false;
+    if (!error) {
+      resolve({ userName: "Sandeep", password: "12" });
+    } else {
+      reject("Error: Something Went wrong");
+    }
+  }, 1000);
+});
+
+const getSandeep = async () => {
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users"); //fetch hai netwprk request hai time lagega
-    console.log(typeof response);
-    const data = await response.json(); // this also takes time
-    // console.log(data);
+    const data = await promiseFour;
+    console.log(data);
   } catch (error) {
     console.log(error);
   }
 };
 
-getAllUsers();
+getSandeep();
